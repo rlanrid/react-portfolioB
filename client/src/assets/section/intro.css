@@ -1,0 +1,161 @@
+.intro__wrap {
+    padding-top: 195px;
+    padding-bottom: 195px;
+    color: var(--gainsboro);
+    font-family: var(--mainfont-gmarket);
+    text-align: center;
+}
+
+.intro__text {
+    font-size: 5rem;
+    line-height: 1.2;
+    word-break: keep-all;
+    margin-bottom: 70px;
+}
+
+.intro__desc {
+    font-size: 1.2rem;
+    line-height: 1.437;
+    font-family: var(--mainfont-chosun);
+    margin-bottom: 100px;
+}
+
+.intro__stack {
+    overflow: hidden;
+    width: 75%;
+    margin: auto;
+}
+
+.slider__wrap {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.linear__effect {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to right, var(--primary-color) 1%, rgba(7, 7, 7, 0) 20%, rgba(7, 7, 7, 0) 80%, var(--primary-color) 99%);
+    z-index: 1;
+}
+
+.slider__track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 45s linear infinite;
+}
+
+.slider {
+    display: inline-block;
+    padding: 0 25px;
+    white-space: nowrap;
+}
+
+.text {
+    color: var(--text-grey);
+    font-size: 26px;
+}
+
+.text.tHtml {
+    font-family: var(--font-html);
+}
+
+.text.tCss {
+    font-family: var(--font-css);
+}
+
+.text.tJs {
+    font-family: var(--font-js);
+}
+
+.text.tNode {
+    font-family: var(--font-node);
+}
+
+.text.tMongo {
+    font-family: var(--font-mongo);
+}
+
+.text.tReact {
+    font-family: var(--font-react);
+}
+
+.text.tPhp {
+    font-family: var(--font-php);
+}
+
+.text.tJquery {
+    font-family: var(--font-jqeury);
+}
+
+.text.tSass {
+    font-family: var(--font-sass);
+}
+
+.text.tJson {
+    font-family: var(--mainfont-tg);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100%));
+    }
+}
+
+
+@media(max-width:1380px) {
+    .intro__text {
+        font-size: 4rem;
+    }
+
+    .intro__desc {
+        font-size: 0.9rem;
+    }
+}
+
+@media(max-width:1080px) {
+    .intro__text {
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+
+    .intro__desc {
+        font-size: 0.9rem;
+        margin-bottom: 70px;
+    }
+}
+
+@media(max-width:860px) {
+    .intro__text {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:680px) {
+    .intro__stack {
+        width: 100%;
+    }
+}
+
+@media(max-width:480px) {
+    .intro__text {
+        font-size: 2rem;
+        margin-bottom: 80px;
+    }
+
+    .intro__desc {
+        display: none;
+    }
+}
+
+@media(max-width:375px) {
+    .intro__text {
+        font-size: 1.8rem;
+    }
+}

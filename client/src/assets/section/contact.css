@@ -1,0 +1,129 @@
+#contact {
+    position: relative;
+}
+
+.contact__line__ver {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    z-index: -1;
+}
+
+.contact__line__ver .container {
+    height: 576px;
+}
+
+.contact__line__horiz .container {
+    height: 576px;
+}
+
+.contact__ver__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__line__horiz {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    z-index: -1;
+}
+
+.contact__horiz__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.horizon__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-grey);
+    padding-right: 0;
+}
+
+.contact__title {
+    position: sticky;
+    left: 0;
+    top: 80px;
+    z-index: 17;
+}
+
+.contact__cont {
+    width: 100%;
+    height: 576px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact__cont .light {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: var(--gainsboro);
+    filter: blur(100px);
+    opacity: 0.15;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.contact__cont .hello {
+    font-size: 12px;
+    color: var(--mid-grey);
+    font-family: var(--mainfont-tg);
+    margin-bottom: 20px;
+}
+
+.contact__cont .email {
+    font-size: 4vw;
+    color: var(--gainsboro);
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: border-bottom 0.15s;
+    font-family: var(--mainfont-gmarket);
+}
+
+.contact__cont .email:hover {
+    border-bottom: 1px solid var(--gainsboro);
+}
+
+@media(max-width:780px) {
+    .contact__cont .email {
+        font-size: 6vw;
+    }
+
+    .contact__cont .light {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media(max-width:490px) {
+    .contact__line__ver {
+        top: 65px;
+    }
+
+    .contact__line__horiz {
+        top: 65px;
+    }
+}

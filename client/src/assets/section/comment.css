@@ -1,0 +1,233 @@
+#comment {
+    position: relative;
+}
+
+.comment__title {
+    position: sticky;
+    left: 0;
+    top: 80px;
+    z-index: 16;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment__filter svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    color: var(--gainsboro);
+    cursor: pointer;
+    animation: float 2s ease-in-out infinite;
+}
+
+.comment__filter svg:hover {
+    animation-play-state: paused;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.comment__cont {
+    width: 100%;
+    border-bottom: 1px solid var(--dark-grey);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment__form {
+    width: 100%;
+    height: 200px;
+    border: 1px solid var(--gainsboro);
+    padding: 30px;
+    background-color: var(--primary-color);
+}
+
+.comment__form input {
+    width: 100%;
+    display: block;
+    resize: none;
+    padding: 15px;
+    font-family: var(--mainfont-abel);
+}
+
+.comment__form input:focus {
+    outline: none;
+}
+
+.comment__length {
+    font-family: var(--mainfont-abel);
+    font-size: 1rem;
+    color: var(--gainsboro);
+    text-align: right;
+}
+
+.comment__length.limit i {
+    color: var(--red);
+    font-weight: 800;
+}
+
+.comment__form button {
+    padding: 5px;
+    background-color: transparent;
+    color: var(--gainsboro);
+    border: 1px solid var(--gainsboro);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.comment__form button:hover {
+    background-color: var(--gainsboro);
+    color: var(--primary-color);
+}
+
+.comment__list {
+    width: 100%;
+    background-color: var(--primary-color);
+    border-left: 1px solid var(--gainsboro);
+    border-top: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+}
+
+.comment__list .list {
+    min-height: 200px;
+    color: var(--gainsboro);
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-right: 1px solid var(--gainsboro);
+    border-bottom: 1px solid var(--gainsboro);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.comment__list .list:hover {
+    background-color: var(--gainsboro);
+    color: var(--primary-color);
+}
+
+.list .co__info {
+    width: 100%;
+    padding: 5px 10px;
+    word-break: break-all;
+    overflow-x: hidden;
+    font-size: 14px;
+    font-family: var(--mainfont-gmarket);
+}
+
+.list .co__title {
+    margin-bottom: 10px;
+}
+
+.list .co__edit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    color: var(--gainsboro);
+    cursor: pointer;
+    padding-top: 5px;
+    transition: all 0.3s;
+}
+
+.list:hover .co__edit p {
+    color: var(--primary-color);
+}
+
+.list .co__delete {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.list .co__author {
+    width: 100%;
+    font-size: 14px;
+    color: var(--black500);
+}
+
+.list .co__edit__form {
+    padding: 0 10px;
+}
+
+.list .co__edit__form input {
+    color: var(--gainsboro);
+    border: 1px solid var(--gainsboro);
+    transition: all 0.3s;
+    height: 90px;
+}
+
+.list:hover .co__edit__form input {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
+.list .co__edit__form button {
+    margin: 1rem 0 0.5rem;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--gainsboro);
+    border: 1px solid var(--gainsboro);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.list:hover .co__edit__form button {
+    background-color: var(--gainsboro);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+@media(max-width:1200px) {
+    .comment__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media(max-width:980px) {
+    .comment__cont {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .comment__form {
+        width: 100%;
+        border-right: 1px solid var(--gainsboro);
+    }
+
+    .list .co__title {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 780px) {
+    .comment__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+
+@media(max-width: 400px) {
+    .comment__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

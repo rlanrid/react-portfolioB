@@ -1,0 +1,128 @@
+#about {
+    padding-bottom: 225px;
+}
+
+.about__cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__left {
+    width: 50%;
+    padding: 195px 0;
+}
+
+.about__right {
+    width: 37.5%;
+}
+
+.about__intro {
+    font-size: 32px;
+    font-family: var(--mainfont-gmarket);
+    color: var(--gainsboro);
+    margin-bottom: 38px;
+    word-break: keep-all;
+}
+
+.about__title {
+    position: sticky;
+    z-index: 17;
+    left: 0;
+    top: 80px;
+}
+
+.about__link {
+    width: 50%;
+}
+
+.about__link a {
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--gainsboro);
+    transition: background 0.3s;
+}
+
+.about__link a>p {
+    font-family: var(--mainfont-tg);
+    font-size: 14px;
+    color: var(--gainsboro);
+    transition: color 0.3s;
+}
+
+.about__link a>img {
+    width: 20px;
+    height: 20px;
+}
+
+.about__link a:hover {
+    background-color: var(--gainsboro);
+}
+
+.about__link a:hover p {
+    color: var(--primary-color);
+}
+
+.about__link a:hover img {
+    filter: grayscale(100%) sepia(100%) hue-rotate(0deg) saturate(10000%) brightness(0%);
+}
+
+.about__right {}
+
+.about__right figure {
+    height: 100%;
+    filter: saturate(80%) brightness(70%) grayscale(100%);
+    background-image: url(../img/icon1-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: 50%;
+    transition: filter 0.3s;
+}
+
+.about__right figure:hover {
+    filter: saturate(15%) brightness(90%) grayscale(50%);
+}
+
+.about__right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    opacity: 0.03;
+}
+
+@media(max-width:980px) {
+    .about__cont {
+        flex-direction: column-reverse;
+    }
+
+    .about__left {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .about__intro {
+        font-size: 28px;
+    }
+
+    .about__right {
+        width: 100%;
+        height: 800px;
+    }
+
+    .about__link {
+        width: 70%;
+    }
+}
+
+@media(max-width:480px) {
+    .about__intro {
+        font-size: 1.25rem;
+    }
+
+    .about__link a {
+        padding: 15px;
+    }
+}
